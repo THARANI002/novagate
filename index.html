@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Access | Authentication</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Neon cursor elements -->
+  <div class="neon-cursor" id="neon-cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- Lightning background -->
+  <div class="lightning" id="lightning-container"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <h1 class="logo">⚡ NeonAccess</h1>
+  </header>
+
+  <!-- Authentication container -->
+  <main class="auth-container">
+    <div class="forms-container">
+      <!-- Login Form -->
+      <div class="form card" id="loginForm">
+        <h2>Login</h2>
+        <form id="login">
+          <div class="input-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            <div class="error" id="loginEmailError">Please enter a valid email with @ symbol</div>
+          </div>
+
+          <div class="input-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-container">
+              <input type="password" id="loginPassword" placeholder="Enter your password" required>
+              <button type="button" class="toggle-password"><i class="eye-icon">👁️‍🗨️</i></button>
+            </div>
+            <div class="error" id="loginPasswordError">Please enter your password</div>
+          </div>
+
+          <button type="submit" class="btn neon-btn">Login</button>
+        </form>
+        <div class="switch-form">
+          New here? <a id="showRegister">Register now</a>
+        </div>
+      </div>
+
+      <!-- Register Form -->
+      <div class="form card" id="registerForm" style="display: none;">
+        <h2>Create Account</h2>
+        <form id="registration">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Choose a username" required>
+            <div class="error" id="usernameError">Username must be at least 3 characters</div>
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <div class="error" id="emailError">Please enter a valid email with @ symbol</div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Create a password" required>
+              <button type="button" class="toggle-password"><i class="eye-icon">👁️‍🗨️</i></button>
+            </div>
+            <div class="password-info">Must be at least 8 characters with at least one symbol</div>
+            <div class="error" id="passwordError">Password must be at least 8 characters with at least one symbol</div>
+          </div>
+
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="password-container">
+              <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+              <button type="button" class="toggle-password"><i class="eye-icon">👁️‍🗨️</i></button>
+            </div>
+            <div class="error" id="confirmError">Passwords do not match</div>
+          </div>
+
+          <button type="submit" class="btn neon-btn">Register</button>
+        </form>
+        <div class="switch-form">
+          Already have an account? <a id="showLogin">Login here</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 NeonAccess. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
